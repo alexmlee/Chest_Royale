@@ -1,0 +1,1 @@
+OFFICIAL_ORDER = YAML.load_file(File.join('config', 'master.yml'))
