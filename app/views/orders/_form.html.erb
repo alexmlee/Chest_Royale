@@ -10,11 +10,15 @@
       </ul>
     </div>
   <% end %>
+  
+  <% @order.chests.each_with_index do |chest, index| %>
+    <% fields_for 'chest[]', chest do |chest_fields| %>
+      
+      <%= chest_fields.text_field index %>
+    <% end %>
+  <% end %>
 
-  <div class="field">
-    <%= f.label :list %><br>
-    <%= f.text_field :list %>
-  </div>
+
 
   <div class="actions">
     <%= f.submit %>
